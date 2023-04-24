@@ -11,7 +11,9 @@
 var taskInput=document.getElementById("new-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.getElementById("incompleteTasks");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+var completedTasksHolder = document.getElementById("completed-tasks");//completed-tasks
+
+let counter = 0;
 
 
 //New task list item
@@ -33,10 +35,12 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='task';
+    label.className = 'task';
+    label.htmlFor = `${counter}`;
 
     //Each elements, needs appending
-    checkBox.type="checkbox";
+    checkBox.type = "checkbox";
+    checkBox.id = `${counter}`;
     editInput.type="text";
     editInput.className="task";
 
@@ -54,6 +58,9 @@ var createNewTaskElement=function(taskString){
     listItem.appendChild(editInput);
     listItem.appendChild(editButton);
     listItem.appendChild(deleteButton);
+
+    counter = counter + 1;
+
     return listItem;
 }
 
