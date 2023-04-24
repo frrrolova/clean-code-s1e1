@@ -5,14 +5,14 @@ body {
 }
 
 ul {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 li, h3 {
-  list-style:none;
+  list-style: none;
 }
 input,button{
-  outline:none;
+  outline: none;
 }
 
 .main {
@@ -148,10 +148,10 @@ input,button{
 /* Edit Task */
 
 .todo-list__item_edit .task__input {
-    display:inline-block;
-    width:224px;
+    display: inline-block;
+    width: 224px;
 }
 
 .todo-list__item_edit .task__name {
-    display:none;
+    display: none;
 }
